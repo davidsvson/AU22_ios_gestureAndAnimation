@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GestureAndAnimation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" alpha="0.10000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eop-I2-H9F">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ir3-f2-jDX" appends="YES" id="ERt-Yk-K9x"/>
+                                    <outletCollection property="gestureRecognizers" destination="YJV-bl-aUM" appends="YES" id="qCg-4u-s1o"/>
+                                </connections>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eop-I2-H9F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Ms-V6-DDX"/>
+                            <constraint firstItem="eop-I2-H9F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fls-m0-6cq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eop-I2-H9F" secondAttribute="bottom" id="kLY-JC-NqU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eop-I2-H9F" secondAttribute="trailing" id="kPR-Mz-nUN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doubleTapRecognizer" destination="YJV-bl-aUM" id="PJc-XR-lbc"/>
+                        <outlet property="gestureNameLabel" destination="eop-I2-H9F" id="Upc-qm-T2P"/>
+                        <outlet property="singleTapRecognizer" destination="Ir3-f2-jDX" id="zoa-90-ZIB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Ir3-f2-jDX" userLabel="Single Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="handleTap:" destination="BYZ-38-t0r" id="FbR-CS-mdX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="YJV-bl-aUM" userLabel="Double Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="handleDoubleTap:" destination="BYZ-38-t0r" id="eqk-OX-TB0"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
